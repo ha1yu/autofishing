@@ -8,6 +8,8 @@ import (
 func EchoGlobalHandler(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		//urlPath := c.Request().RequestURI
+		rep := c.Response()
+		rep.Header().Set("Access-Control-Allow-Origin", "*") //允许访问所有域
 		return next(c)
 	}
 }
