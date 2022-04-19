@@ -115,7 +115,7 @@ function ajax(type, url, success) {
 }
 
 async function fun() {
-    let data = await ajax('get', 'http://127.0.0.1:8888/reg')
+    let data = await ajax('get', 'http://192.168.0.102:8888/reg')
     if (data == 0) {
         a = 1
         // location.reload();
@@ -132,7 +132,7 @@ async function fun() {
 fun()
 
 async function fun2() {
-    let data = await ajax('get', 'http://127.0.0.1:8888/reg')
+    let data = await ajax('get', 'http://192.168.0.102:8888/reg')
     if (data == 1 & a == 1) {
         location.reload();
         console.log(data)
